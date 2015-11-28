@@ -1,0 +1,20 @@
+<h3><i class="fa fa-truck"></i>  Update {{vendor.vendorName}}</h3>
+<form class="form-horizontal" role="form" ng-submit="updateVendor()">
+  <div class="form-group">
+  <label for="name" class="col-sm-2 control-label">Name</label>
+  <div class="col-sm-10">
+      <input type="text" ng-model="vendor.vendorName" class="form-control" id="vendorName" placeholder="Vendor name"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="type" class="col-sm-2 control-label">Vendor Cuisine Type</label>
+  <div class="col-sm-10">
+      <input type="text" ng-model="vendor.vendorType" class="form-control" id="vendorType" placeholder="Vendor cuisine type"/>
+  </div>
+</div>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-primary" value="Save"/>
+    </div>
+</div>
+</form>

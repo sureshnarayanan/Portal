@@ -1,0 +1,13 @@
+
+<h3><i class="fa fa-user"></i>  Users</h3>
+
+<table class="table">
+
+    <tr ng-repeat="user in useraccounts">
+        <td>{{user.displayName}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewVendor({id:vendor._id})">View</a>
+            <a class="btn btn-danger"  ng-click="deleteVendor(vendor)">Delete</a>
+        </td>
+    </tr>
+</table>

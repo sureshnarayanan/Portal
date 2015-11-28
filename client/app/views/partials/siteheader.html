@@ -1,0 +1,55 @@
+<header class="navbar navbar-inverse navbar-fixed-top navbar-inner">
+    <div class="container" ng-controller="HomeController">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs" href="/#/"><span class="brand">Portal</span></a>
+        </div>
+        <nav class="hidden-xs">
+          <a href="/#/" role="button" class="navbar-brand">
+              <span class="brand">Portal</span>
+          </a>
+            <ul class="nav navbar-nav">
+                <li><a href="/gettingstarted">Getting started</a></li>
+                <li class="dropdown" uib-dropdown>
+                        <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
+                            Services <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/#/" >Service 1</a></li><li><a href="/test">Service 2</a></li><li><a href="#c">Service 3</a></li>
+                        </ul>
+                </li>
+                <li class="dropdown" uib-dropdown>
+                        <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
+                            Admin <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/#/vendors" >Manage Vendors</a></li>
+                            <li><a href="/#/useraccounts" >Manage Users</a></li>
+                        </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="padding-left:20px;padding-top:10px">
+           <li>
+            <div class="input-group"><input type="search" class="form-control" style="width: 400px;" placeholder="How can we help you today?">
+            <i class="glyphicon glyphicon-search" style="z-index:10000;margin-left:-20px;margin-top:6px;"></i></div>
+            </li>
+            <li ng-if="!isAuthenticated()"> <a style="color:#ffffff;float: right;" href="/#/login">Sign In</a> </li>
+            <li ng-if="isAuthenticated()"><a style="color:#ffffff;float: right;" href="/#/profile">Profile</a></li>
+            <li ng-if="isAuthenticated()"> <a style="color:#ffffff;float: right;" href="/#/logout">Sign out</a> </li>
+            </ul>
+        </nav>
+        <nav class="visible-xs" uib-collapse="!isCollapsed">
+            <ul class="nav navbar-nav">
+                <!-- <li><a href="/gettingstarted" ng-click="isCollapsed = !isCollapsed">Getting started</a></li>
+                <li><a href="/test" ng-click="isCollapsed = !isCollapsed">Services</a></li>
+                <li><a href="/#/login" ng-click="isCollapsed = !isCollapsed">Sign-In</a></li> -->
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="header-placeholder"></div>

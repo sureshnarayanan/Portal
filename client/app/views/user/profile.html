@@ -1,0 +1,77 @@
+<div class="container" ng-controller="ProfileController">
+  <div class="panel panel-default">
+    <div class="panel-heading">Profile</div>
+    <div class="panel-body">
+      <legend><i class="ion-clipboard"></i> Edit My Profile</legend>
+      <form method="post" ng-submit="updateProfile()">
+        <!-- <div class="form-group">
+          <label class="control-label">Profile Picture</label>
+          <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}">
+        </div> -->
+        <div class="row">
+        <div class="form-group col-lg-5">
+          <label class="control-label"><i class="ion-at"></i> User ID(Email Address)</label>
+          <input type="email" disabled="disabled" class="form-control" ng-model="user.email" />
+        </div></div>
+        <div class="row">
+        <div class="form-group col-lg-5">
+          <label class="control-label"><i class="ion-person"></i> Display Name</label>
+          <input type="text" class="form-control" ng-model="user.displayName" />
+        </div></div>
+        <div class="row">
+        <div class="form-group col-lg-5">
+          <label class="control-label"><i class="ion-android-mail"></i> Address Line1</label>
+          <input type="text" class="form-control" ng-model="user.address.addressLine1" />
+        </div></div>
+        <div class="row">
+        <div class="form-group col-lg-5">
+          <label class="control-label"><i class="ion-android-mail"></i> Address Line2</label>
+          <input type="text" class="form-control" ng-model="user.address.addressLine2" />
+        </div></div>
+        <div class="row">
+        <div class="form-group col-lg-5">
+          <label class="control-label"><i class="ion-android-mail"></i> City</label>
+          <input type="text" class="form-control" ng-model="user.address.city" />
+        </div></div>
+        <div class="row">
+        <div class="form-group col-lg-5">
+          <label class="control-label"><i class="ion-android-mail"></i> State</label>
+          <input type="text" class="form-control" ng-model="user.address.state" />
+        </div></div>
+        <div class="row">
+        <div class="form-group col-lg-5">
+          <label class="control-label"><i class="ion-android-mail"></i> Zip Code</label>
+          <input type="text" class="form-control" ng-model="user.address.zipCode" />
+        </div></div>
+        <div class="row">
+        <div class="form-group col-lg-5">
+          <label class="control-label"><i class="ion-android-mail"></i> Country</label>
+          <input type="text" class="form-control" ng-model="user.address.country" />
+        </div></div>
+        <button class="btn btn-lg btn-primary">Update Information</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Accounts</div>
+    <div class="panel-body">
+      <legend><i class="ion-link"></i> Linked Accounts</legend>
+      <div class="btn-group-vertical">
+        <button class="btn btn-sm btn-danger" ng-if="user.facebook" ng-click="unlink('facebook')">
+          <i class="ion-social-facebook"></i> Unlink Facebook Account
+        </button>
+        <button class="btn btn-block btn-facebook" ng-if="!user.facebook" ng-click="link('facebook')">
+          <i class="ion-social-facebook"></i> Link Facebook Account
+        </button>
+
+        <button class="btn btn-sm btn-danger" ng-if="user.google" ng-click="unlink('google')">
+          <i class="ion-social-googleplus"></i> Unlink Google Account
+        </button>
+        <button class="btn btn-block btn-google-plus" ng-if="!user.google" ng-click="link('google')">
+          <i class="ion-social-googleplus"></i> Link Google Account
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" ng-app="PortalApp">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+	<base href="/">
+
+	<title>Portal</title>
+  <link href="images/favicon.png" rel="shortcut icon">
+	<!-- CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href=" css/font-awesome.min.css">
+	<link href="css/angular-toastr.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href=" css/style.css"> <!-- custom styles -->
+<link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+	<!-- Libs -->
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-animate.js"></script>
+	<script src="libs/angular-messages.js"></script>
+	<script src="libs/angular-resource.js"></script>
+	<script src="libs/angular-sanitize.js"></script>
+	<script src="libs/angular-ui-router.js"></script>
+	<script src="libs/angular-toastr.tpls.js"></script>
+	<script src="libs/satellizer.min.js"></script>
+	<script type="text/javascript" src="libs/bootstrap/dist/js/ui-bootstrap.min.js"></script>
+	<!-- Application -->
+	<script src="app.js"></script>
+	<script src="routes/routes.js"></script>
+	<!-- Services-->
+	<script src="services/account.js"></script>
+	<script src="services/vendor.js"></script>
+	<script src="services/useraccount.js"></script>
+	<!--Controllers-->
+	<script src="controllers/homecontroller.js"></script>
+	<script src="controllers/logincontroller.js"></script>
+	<script src="controllers/logoutcontroller.js"></script>
+	<script src="controllers/profilecontroller.js"></script>
+	<script src="controllers/vendorcontroller.js"></script>
+	<script src="controllers/useraccountcontroller.js"></script>
+	<!--Directives-->
+	<script src="directives/siteheader.js"></script>
+	<script src="directives/passwordstrength.js"></script>
+	<script src="directives/passwordmatch.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<!-- HEADER -->
+	<div siteheader></div>
+	<!-- ANGULAR DYNAMIC CONTENT -->
+	<div ui-view></div>
+</div>
+</body>
+</html>
