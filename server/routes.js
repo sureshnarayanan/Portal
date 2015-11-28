@@ -29,6 +29,9 @@ module.exports = function(app) {
 	//Product Routes
 	app.post('/api/products', product.createProduct);
 	app.get('/api/products', product.getAllProducts);
+	app.get('/api/products/:id', product.getProduct);
+	app.put('/api/products/:id', product.updateProduct);
+	app.delete('/api/products/:id', product.deleteProduct);
 
 	// frontend routes =========================================================
 	// route to handle all angular requests
