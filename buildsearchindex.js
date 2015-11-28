@@ -20,16 +20,26 @@ var productSchema = new mongoose.Schema({
 var Product = mongoose.model('Product', productSchema);
 
 Product.find(function(err, products){
-  //if (err){return res.status(400).send({message:'Error to get Products: '+ err})}
-  console.log(products);
-  var data = JSON.stringify({
-  "text" :"everything is awesome"
-});
+  if (err){throw err;}
+
+//  console.log(products);
+var data = "";
+  products.forEach(function(product)
+  {
+    //console.log(product.name);
+    data = data + '{"index":{"_id":"' + product._id + '"}}\n';
+    data = data + '{"name":"' + product.name + '","description":"' + product.description + '"}\n';
+  //  console.log(data);
+  });
+
+console.log(data);
+//  data = JSON.stringify(data);
+
   // An object of options to indicate where to post to
   var post_options = {
       host: 'localhost',
       port: '9200',
-      path: '/products',
+      path: '/vendor-1/products/_bulk',
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
