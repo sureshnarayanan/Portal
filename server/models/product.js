@@ -2,7 +2,9 @@ var mongoose = require('mongoose');
 
 var productSchema = new mongoose.Schema({
   name      : String,
-  price     : Number
+  price     : Number,
+  description : String,
+  category : String
 });
 
 var ProductDbModel = mongoose.model('Product', productSchema);
@@ -10,7 +12,9 @@ var ProductDbModel = mongoose.model('Product', productSchema);
 exports.createProduct = function(req, res){
   var newProduct = new ProductDbModel({
     name : req.body.productName,
-    price : req.body.productPrice
+    price : req.body.productPrice,
+    description : req.body.productDescription,
+    category : req.body.productCategory,
   });
   newProduct.save(function(){
     res.status(200).send({message:"Product created successfully!"});
