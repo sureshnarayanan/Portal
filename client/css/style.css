@@ -421,3 +421,24 @@ ul {
     opacity: 1;
   }
 }
+
+.search {
+
+ margin: 0;
+ width: 100%;
+ font-family: sans-serif;
+ font-size: 15px;
+ appearance: none;
+ box-shadow: none;
+ border-radius: 2px;
+ padding: 10px;
+ border: solid 1px #dbdbdb;
+ transition: box-shadow 0.3s, border 0.3s;
+ height:28px;
+ line-height:28px;
+}
+.search input[type="text"]:focus,
+.search input[type="text"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}

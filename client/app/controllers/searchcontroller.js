@@ -1,4 +1,4 @@
-angular.module('PortalApp').controller('SearchController', function($scope, searchclient) {
+angular.module('PortalApp').controller('SearchController', function($scope,$stateParams, searchclient) {
 
 // search for documents
     searchclient.search({
@@ -8,8 +8,9 @@ angular.module('PortalApp').controller('SearchController', function($scope, sear
     body: {
     "query":
         {
-            "match": {
-                name:"ice"
+            "query_string": {
+               "query": "*" + $stateParams.query + "*",
+                "fields":["name","description"]
             }
         },
     }

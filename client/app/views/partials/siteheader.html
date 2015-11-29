@@ -35,8 +35,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right" style="padding-left:20px;padding-top:10px">
            <li>
-            <div class="input-group"><input type="search" class="form-control" style="width: 400px;" placeholder="Search...">
-            <i class="glyphicon glyphicon-search" style="z-index:10000;margin-left:-20px;margin-top:6px;" ></i></div>
+            <form ng-submit="search()"><div class="input-group"><input type="text" ng-model="searchtext" class="search" style="width: 500px;" placeholder="Search...">
+            <i class="glyphicon glyphicon-search" style="z-index:10000;margin-left:-20px;margin-top:6px;cursor: pointer; cursor: hand; " ng-click="search()"></i></div></form>
             </li>
             <li ng-if="!isAuthenticated()"> <a style="color:#ffffff;float: right;" href="/#/login">Sign In</a> </li>
             <li ng-if="isAuthenticated()"><a style="color:#ffffff;float: right;" href="/#/profile">Profile</a></li>

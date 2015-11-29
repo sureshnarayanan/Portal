@@ -1,4 +1,4 @@
-angular.module('PortalApp').controller('HomeController', function($scope, $auth) {
+angular.module('PortalApp').controller('HomeController', function($scope, $auth, $window) {
 
 	$scope.tagline = 'Welcome to the Home Page!';
 	$scope.isAuthenticated = function() {
@@ -6,9 +6,6 @@ angular.module('PortalApp').controller('HomeController', function($scope, $auth)
 	    };
 
 	$scope.search = function() {
-		$http({method: 'GET', url: '/#/search'}).
-						success(function(data, status, headers, config) {
- 						$scope.results.push(data);  //retrieve results and add to existing results
-						});
-			    };
+		$window.location.href = '/#/search?query='+$scope.searchtext;
+	};
 });

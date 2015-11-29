@@ -34,7 +34,7 @@ angular.module('PortalApp')
           loginRequired: loginRequired
         }
       }).state('search', {
-        url: '/search',
+        url: '/search?query',
         templateUrl: 'views/search/results.html',
         controller: 'SearchController'
       }).state('vendors', {
