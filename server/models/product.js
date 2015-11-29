@@ -4,8 +4,8 @@ var productSchema = new mongoose.Schema({
   name      : String,
   price     : Number,
   description : String,
-  category : String,
-  /*img : {
+  category : String/*,
+  img : {
     data : Buffer,
     contentType : String
   }*/
