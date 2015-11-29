@@ -1,6 +1,6 @@
 var appName = 'PortalApp';
 
-var module = angular.module(appName, ['ngResource','ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer', 'ui.bootstrap']);
+var module = angular.module(appName, ['ngResource','ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer', 'ui.bootstrap', 'elasticsearch']);
 
 angular.element(document).ready(function() {
 //    angular.bootstrap(document, [appName]);

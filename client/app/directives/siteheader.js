@@ -6,3 +6,13 @@ angular.module(appName).directive('siteheader',function(){
     templateUrl: "views/partials/siteheader.html"
   }
 });
+// .directive('onKeyPressCall', function () {
+//     return function (scope, element, attrs) {
+//         element.bind("keydown keypress", function (event) {
+//                 scope.$apply(function (){
+//                     scope.$eval(attrs.ngEnter);
+//                 });
+//                 event.preventDefault();
+//         });
+//     };
+// });

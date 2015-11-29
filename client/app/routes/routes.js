@@ -33,6 +33,10 @@ angular.module('PortalApp')
         resolve: {
           loginRequired: loginRequired
         }
+      }).state('search', {
+        url: '/search',
+        templateUrl: 'views/search/results.html',
+        controller: 'SearchController'
       }).state('vendors', {
         url: '/vendors',
         templateUrl: 'views/vendors/list.html',
