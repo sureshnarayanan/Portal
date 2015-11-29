@@ -53,6 +53,14 @@ angular.module('PortalApp')
         url: '/useraccounts',
         templateUrl: 'views/useraccounts/list.html',
         controller: 'UseraccountController'
+      }).state('viewUseraccount', {
+        url: '/useraccounts/:id/view',
+        templateUrl: 'views/useraccounts/view.html',
+        controller: 'UseraccountViewController'
+      }).state('editUseraccount', {
+        url: '/useraccounts/:id/edit',
+        templateUrl: 'views/useraccounts/edit.html',
+        controller: 'UseraccountEditController'
       });
 
     $urlRouterProvider.otherwise('/');

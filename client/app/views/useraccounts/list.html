@@ -3,11 +3,11 @@
 
 <table class="table">
 
-    <tr ng-repeat="user in useraccounts">
-        <td>{{user.displayName}}</td>
+    <tr ng-repeat="useraccount in useraccounts">
+        <td>{{useraccount.displayName}}</td>
         <td>
-            <a class="btn btn-primary" ui-sref="viewVendor({id:vendor._id})">View</a>
-            <a class="btn btn-danger"  ng-click="deleteVendor(vendor)">Delete</a>
+            <a class="btn btn-primary" ui-sref="viewUseraccount({id:useraccount._id})">View</a>
+            <a class="btn btn-danger"  ng-click="deleteUseraccount(useraccount)">Delete</a>
         </td>
     </tr>
 </table>

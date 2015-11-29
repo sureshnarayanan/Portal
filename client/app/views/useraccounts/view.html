@@ -1,14 +1,14 @@
-<h3><i class="fa fa-truck"></i>Details for {{user.displayName}}</h3>
+<h3><i class="fa fa-user"></i>Details for {{useraccount.displayName}}</h3>
 <table class="table">
     <tr>
         <td>User Name</td>
-        <td>{{user.displayName}}</td>
+        <td>{{useraccount.displayName}}</td>
     </tr>
     <tr>
         <td>User address line1</td>
-        <td>{{user.addressLine1}}</td>
+        <td>{{useraccount.email}}</td>
     </tr>
 </table>
 <div>
-    <a class="btn btn-primary" ui-sref="editVendor({id:vendor._id})">Edit</a>
+    <a class="btn btn-primary" ui-sref="editUseraccount({id:useraccount._id})">Edit</a>
 </div>
