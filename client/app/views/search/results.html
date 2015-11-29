@@ -1,3 +1,9 @@
+<div ng-if="noresults == 1">
+    <h4>No products found for search term "{{searchterm}}".</h4>
+</div>
+<div ng-if="isreplacedsearchterm == 1">
+    <h4>No products found for search term "{{origquery}}". Showing results for "{{searchterm}}" instead.</h4>
+</div>
 <table class="table">
     <tr ng-repeat="product in hits">
         <td><a href="/#/products/{{product['_id']}}">{{product['_source']['name']}}</a></td>
