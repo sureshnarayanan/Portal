@@ -13,7 +13,18 @@
           <a href="/#/" role="button" class="navbar-brand">
               <span class="brand">Portal</span>
           </a>
-            <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav" style="padding-left:20px;padding-top:10px">
+         <li>
+          <form ng-submit="search()"><div class="input-group"><input type="text" ng-model="searchtext" class="search" style="width: 600px;" placeholder="Search...">
+          <i class="glyphicon glyphicon-search" style="z-index:10000;margin-left:-20px;margin-top:6px;cursor: pointer; cursor: hand; " ng-click="search()"></i></div></form>
+          </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <li ng-if="!isAuthenticated()"> <a style="color:#ffffff;float: right;" href="/#/login">Sign In</a> </li>
+          <li ng-if="isAuthenticated()"><a style="color:#ffffff;float: right;" href="/#/profile">Profile</a></li>
+          <li ng-if="isAuthenticated()"> <a style="color:#ffffff;float: right;" href="/#/logout">Sign out</a> </li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
                 <li><a href="/gettingstarted">Getting started</a></li>
                 <li class="dropdown" uib-dropdown>
                         <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
@@ -33,15 +44,7 @@
                         </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right" style="padding-left:20px;padding-top:10px">
-           <li>
-            <form ng-submit="search()"><div class="input-group"><input type="text" ng-model="searchtext" class="search" style="width: 500px;" placeholder="Search...">
-            <i class="glyphicon glyphicon-search" style="z-index:10000;margin-left:-20px;margin-top:6px;cursor: pointer; cursor: hand; " ng-click="search()"></i></div></form>
-            </li>
-            <li ng-if="!isAuthenticated()"> <a style="color:#ffffff;float: right;" href="/#/login">Sign In</a> </li>
-            <li ng-if="isAuthenticated()"><a style="color:#ffffff;float: right;" href="/#/profile">Profile</a></li>
-            <li ng-if="isAuthenticated()"> <a style="color:#ffffff;float: right;" href="/#/logout">Sign out</a> </li>
-            </ul>
+
         </nav>
         <nav class="visible-xs" uib-collapse="!isCollapsed">
             <ul class="nav navbar-nav">

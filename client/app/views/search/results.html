@@ -1,12 +1,36 @@
+<div class="container container3">
+  <div class="panel panel-default">
+    <div class="panel-heading"><i class="fa fa-search"></i> {{hits.length}} results for "{{searchterm}}"
+        <div style="float:right;">
+          <label for="sort"> Sort by </label>
+          <select name="sort" ng-model="searchsort">
+            <option value="PL2H">Price: Low to High</option>
+            <option value="PL2H">Price: Low to High</option>
+            <option value="Rating">Customer Rating</option>
+            <option value="TopSelling">Top Selling</option>
+          </select>
+        </div>
+    </div>
+    <div class="panel-body">
+
 <div ng-if="noresults == 1">
-    <h4>No products found for search term "{{searchterm}}".</h4>
+    <span><b>No products found for search term "{{searchterm}}".</b></span>
 </div>
 <div ng-if="isreplacedsearchterm == 1">
-    <h4>No products found for search term "{{origquery}}". Showing results for "{{searchterm}}" instead.</h4>
+    <span><b>No products found for search term "{{origquery}}". Showing results for "{{searchterm}}" instead.</b></span>
 </div>
 <table class="table">
     <tr ng-repeat="product in hits">
-        <td><a href="/#/products/{{product['_id']}}">{{product['_source']['name']}}</a></td>
-        <td>{{product['_source']['description']}}</td>
+        <td style="border-top:0px;border-bottom:0px;"><h1><i class="fa fa-file-image-o"></i></h1>
+          <a href="/#/products/{{product['_id']}}" style="color:blue;">{{product['_source']['name']}}</a>
+<br>{{product['_source']['description']}}
+<br><label>Qty&nbsp;</label><input type="number" value="1" style="width:50px;">&nbsp;&nbsp;
+<label><i class="fa fa-usd"></i></label><input type="text" value="10.00" style="width:100px;" disabled>&nbsp;&nbsp;
+<a class="btn btn-primary" ui-sref="viewVendor({id:vendor._id})"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+<br><br>
+        </td>
     </tr>
 </table>
+</div>
+  </div>
+</div>

@@ -1,11 +1,13 @@
-
-<h3><i class="fa fa-truck"></i>  Vendors</h3>
+<div class="container container3">
+  <div class="panel panel-default">
+    <div class="panel-heading"><i class="fa fa-truck"></i> Vendors</div>
+    <div class="panel-body">
 
 <table class="table">
 
     <tr ng-repeat="vendor in vendors">
-        <td>{{vendor.vendorName}}</td>
-        <td>
+        <td style="border-top:0px;border-bottom:0px">{{vendor.vendorName}}</td>
+        <td style="border-top:0px;border-bottom:0px">
             <a class="btn btn-primary" ui-sref="viewVendor({id:vendor._id})">View</a>
             <a class="btn btn-danger"  ng-click="deleteVendor(vendor)">Delete</a>
         </td>
@@ -13,3 +15,6 @@
 </table>
 
 <a ui-sref="createVendor" class="btn-primary btn-lg nodecoration">Add New Vendor</a>
+</div>
+</div>
+</div>

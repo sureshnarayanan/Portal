@@ -3,7 +3,21 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: #fff;
 }
+.table{
+  border: none;
+  width:40%;
+}
 
+div.container {
+    width: 1200px;
+}
+div.container2 {
+    margin-left:10px;
+    width: 98%;
+}
+div.container3 {
+    width: 95%;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
