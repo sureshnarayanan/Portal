@@ -106,8 +106,7 @@ ul {
 .panel-default > .panel-heading {
   font-size: 85%;
   font-weight: bold;
-  color: #444;
-  text-transform: uppercase;
+  color: #444;  
   background-color: #f6f6f6;
   border-color: #cfd9db;
 }
