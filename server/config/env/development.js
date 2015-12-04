@@ -3,7 +3,7 @@ var port = 8080;
 module.exports = {
     port: port,
   //  db: 'mongodb://ec2-52-24-16-207.us-west-2.compute.amazonaws.com/Vegas'
-    db: 'mongodb://localhost/Vegas',
+    db: 'mongodb://127.0.0.1/Vegas',
     TOKEN_SECRET: process.env.TOKEN_SECRET || 'JWT Token Secret',
     MONGO_URI: process.env.MONGO_URI || 'localhost',
 

@@ -1,4 +1,4 @@
-angular.module('PortalApp').controller('ProductGetAllController',function($scope,$stateParams,Product){
+angular.module('PortalApp').controller('ProductGetAllController',function($scope,$state,popupService,$window,Product){
 
     $scope.products=Product.query();
 

@@ -6,10 +6,10 @@
 <table class="table">
 
     <tr ng-repeat="product in products">
-        <td style="border-top:0px;border-bottom:0px">{{product.productname}}</td>
-        <td style="border-top:0px;border-bottom:0px">{{product.productprice}}</td>
-        <td style="border-top:0px;border-bottom:0px">{{product.productdescription}}</td>
-        <td style="border-top:0px;border-bottom:0px">{{product.productcategory}}</td>
+        <td style="border-top:0px;border-bottom:0px">{{product.productName}}</td>
+        <td style="border-top:0px;border-bottom:0px">{{product.productPrice}}</td>
+        <td style="border-top:0px;border-bottom:0px">{{product.productDescription}}</td>
+        <td style="border-top:0px;border-bottom:0px">{{product.productCategory}}</td>
         <td style="border-top:0px;border-bottom:0px">
             <a class="btn btn-primary" ui-sref="getproduct({id:product._id})">View More</a>
             <a class="btn btn-danger"  ng-click="deleteProduct(product)">Delete</a>

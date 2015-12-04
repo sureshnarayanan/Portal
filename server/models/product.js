@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
 var productSchema = new mongoose.Schema({
-  productname      : String,
-  productprice     : Number,
-  productdescription : String,
-  productcategory : String/*,
+  productName      : String,
+  productPrice     : Number,
+  productDescription : String,
+  productCategory : String/*,
   img : {
     data : Buffer,
     contentType : String
@@ -21,7 +21,7 @@ Url: http://localhost:8080/api/products
 Header: Content-Type = application/json
 Body:
 {
-"productproductname" : "MyProduct",
+"productName" : "MyProduct",
 "productPrice" : 25,
 "productDescription" : "More info on my product",
 "productCategory" : "food"
@@ -91,14 +91,19 @@ exports.createProduct = function(req, res){
   };
 
   var setProductDetails = function(product, req){
+    console.log("req.body: %j", req.body);
+    console.log("req.body.productName:" + req.body.productName);
+    console.log("req.body.productPrice:" + req.body.productPrice);
+    console.log("req.body.productDescription:" + req.body.productDescription);
+    console.log("req.body.productCategory:" + req.body.productCategory);
     if (req.body.productName)
-      product.productname = req.body.productName;
+      product.productName = req.body.productName;
     if (req.body.productPrice)
-      product.productprice = req.body.productPrice;
+      product.productPrice = req.body.productPrice;
     if (req.body.productDescription)
-      product.productdescription = req.body.productDescription;
+      product.productDescription = req.body.productDescription;
     if (req.body.productCategory)
-      product.productcategory = req.body.productCategory;
+      product.productCategory = req.body.productCategory;
     /*if (req.body.productimg){
       //console.error("Image:" +  req.body.productImage);
       product.img.data = req.body.productImage;
