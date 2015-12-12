@@ -1,0 +1,23 @@
+<div class="container container3">
+  <div class="panel panel-default">
+    <div class="panel-heading"><i class="fa fa-truck"></i> Products</div>
+    <div class="panel-body">
+
+<table class="table">
+
+    <tr ng-repeat="product in products">
+        <td style="border-top:0px;border-bottom:0px">{{product.name}}</td>
+        <td style="border-top:0px;border-bottom:0px">{{product.price}}</td>
+        <td style="border-top:0px;border-bottom:0px">{{product.description}}</td>
+        <td style="border-top:0px;border-bottom:0px">{{product.category}}</td>
+        <td style="border-top:0px;border-bottom:0px">
+            <a class="btn btn-primary" ui-sref="getproduct({id:product._id})">View More</a>
+            <a class="btn btn-danger"  ng-click="deleteProduct(product)">Delete</a>
+        </td>
+    </tr>
+</table>
+
+<a ui-sref="createproduct" class="btn-primary btn-lg nodecoration">Add New Product</a>
+</div>
+</div>
+</div>

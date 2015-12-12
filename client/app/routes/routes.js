@@ -65,6 +65,22 @@ angular.module('PortalApp')
         url: '/useraccounts/:id/edit',
         templateUrl: 'views/useraccounts/edit.html',
         controller: 'UseraccountEditController'
+      }).state('createproduct', {
+        url: '/product/:id/create',
+        templateUrl: 'views/product/createProduct.html',
+        controller: 'ProductCreateController'
+      }).state('updateproduct', {
+        url: '/product/:id/update',
+        templateUrl: 'views/product/updateProduct.html',
+        controller: 'ProductUpdateController'
+      }).state('getproduct', {
+        url: '/product/:id/getproduct',
+        templateUrl: 'views/product/getProduct.html',
+        controller: 'ProductGetController'
+      }).state('getallproduct', {
+        url: '/getallproduct',
+        templateUrl: 'views/product/getAllProduct.html',
+        controller: 'ProductGetAllController'
       });
 
     $urlRouterProvider.otherwise('/');

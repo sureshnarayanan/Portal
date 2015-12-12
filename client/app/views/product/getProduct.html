@@ -1,0 +1,22 @@
+<h3><i class="fa fa-truck"></i>Details for {{product.name}}</h3>
+<table class="table">
+    <tr>
+        <td>Product Name</td>
+        <td>{{product.name}}</td>
+    </tr>
+    <tr>
+        <td>Product Price</td>
+        <td>{{product.price}}</td>
+    </tr>
+    <tr>
+        <td>Product Description</td>
+        <td>{{product.description}}</td>
+    </tr>
+    <tr>
+        <td>Product Category</td>
+        <td>{{product.category}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary" ui-sref="updateproduct({id:product._id})">Update Product</a>
+</div>

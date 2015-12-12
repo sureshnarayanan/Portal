@@ -15,7 +15,7 @@
           </a>
           <ul class="nav navbar-nav" style="padding-left:20px;padding-top:10px">
          <li>
-          <form ng-submit="search()"><div class="input-group"><input type="text" ng-model="searchtext" class="search" style="width: 600px;" placeholder="Search...">
+          <form ng-submit="search()"><div class="input-group"><input type="text" ng-model="searchtext" class="search" style="width: 450px;" placeholder="Search...">
           <i class="glyphicon glyphicon-search" style="z-index:10000;margin-left:-20px;margin-top:6px;cursor: pointer; cursor: hand; " ng-click="search()"></i></div></form>
           </li>
           </ul>
@@ -41,6 +41,18 @@
                         <ul class="dropdown-menu">
                             <li><a href="/#/vendors" >Manage Vendors</a></li>
                             <li><a href="/#/useraccounts" >Manage Users</a></li>
+                        </ul>
+                </li>
+                <li class="dropdown" uib-dropdown>
+                        <a role="button" class="dropdown-toggle" uib-dropdown-toggle>
+                            Products <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/#/createproduct" >Create Product</a></li>
+                            <li><a href="/#/updateproduct" >Update Product</a></li>
+                            <li><a href="/#/getproduct" >Get Product</a></li>
+                            <li><a href="/#/getallproduct" >Get All product</a></li>
+                            <li><a href="/#/deleteproduct" >Delete Product</a></li>
                         </ul>
                 </li>
             </ul>
