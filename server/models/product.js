@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
 var productSchema = new mongoose.Schema({
-  name      : String,
-  price     : Number,
-  description : String,
-  category : String/*,
+  productname      : String,
+  productprice     : Number,
+  productdescription : String,
+  productcategory : String/*,
   img : {
     data : Buffer,
     contentType : String
@@ -21,7 +21,7 @@ Url: http://localhost:8080/api/products
 Header: Content-Type = application/json
 Body:
 {
-"productName" : "MyProduct",
+"productproductname" : "MyProduct",
 "productPrice" : 25,
 "productDescription" : "More info on my product",
 "productCategory" : "food"
@@ -92,13 +92,13 @@ exports.createProduct = function(req, res){
 
   var setProductDetails = function(product, req){
     if (req.body.productName)
-      product.name = req.body.productName;
+      product.productname = req.body.productName;
     if (req.body.productPrice)
-      product.price = req.body.productPrice;
+      product.productprice = req.body.productPrice;
     if (req.body.productDescription)
-      product.description = req.body.productDescription;
+      product.productdescription = req.body.productDescription;
     if (req.body.productCategory)
-      product.category = req.body.productCategory;
+      product.productcategory = req.body.productCategory;
     /*if (req.body.productimg){
       //console.error("Image:" +  req.body.productImage);
       product.img.data = req.body.productImage;

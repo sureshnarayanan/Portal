@@ -66,7 +66,7 @@ angular.module('PortalApp')
         templateUrl: 'views/useraccounts/edit.html',
         controller: 'UseraccountEditController'
       }).state('createproduct', {
-        url: '/product/:id/create',
+        url: '/product/create',
         templateUrl: 'views/product/createProduct.html',
         controller: 'ProductCreateController'
       }).state('updateproduct', {

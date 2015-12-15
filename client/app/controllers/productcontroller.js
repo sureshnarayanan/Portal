@@ -19,16 +19,16 @@ angular.module('PortalApp').controller('ProductGetAllController',function($scope
     $scope.product=new Product();
 
     $scope.addProduct=function(){
-        $scope.vendor.$save(function(){
-            $state.go('products');
+        $scope.product.$save(function(){
+            $state.go('getallproduct');
         });
     }
 
 }).controller('ProductUpdateController',function($scope,$state,$stateParams,Product){
 
     $scope.updateProduct=function(){
-        $scope.vendor.$update(function(){
-            $state.go('products');
+        $scope.product.$update(function(){
+            $state.go('getallproduct');
         });
     };
 
