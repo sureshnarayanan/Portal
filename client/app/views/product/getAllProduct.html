@@ -12,7 +12,12 @@
         <td style="border-top:0px;border-bottom:0px">{{product.productCategory}}</td>
         <td style="border-top:0px;border-bottom:0px">
             <a class="btn btn-primary" ui-sref="getproduct({id:product._id})">View More</a>
-            <a class="btn btn-danger"  ng-click="deleteProduct(product)">Delete</a>
+        </td>
+        <td style="border-top:0px;border-bottom:0px">
+        <a class="btn btn-danger"  ng-click="deleteProduct(product)">Delete</a>
+        </td>
+        <td style="border-top:0px;border-bottom:0px">
+        <a class="btn btn-primary" ui-sref="updateproduct({id:product._id})">Update Product</a>
         </td>
     </tr>
 </table>

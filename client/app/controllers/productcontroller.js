@@ -10,9 +10,26 @@ angular.module('PortalApp').controller('ProductGetAllController',function($scope
         }
     }
 
+
 }).controller('ProductGetController',function($scope,$stateParams,Product){
 
     $scope.product=Product.get({id:$stateParams.id});
+
+    $scope.deleteProduct=function(Product){
+        if(popupService.showPopup('Really delete this?')){
+            Product.$delete(function(){
+                $window.location.href='/#/getallproduct';
+            });
+        }
+    }
+    
+    $scope.deleteProductById=function(Product){
+        if(popupService.showPopup('Really delete this?')){
+            $scope.product.$delete(function(){
+                $window.location.href='/#/getallproduct';
+            });
+        }
+    }
 
 }).controller('ProductCreateController',function($scope,$state,$stateParams,Product){
 
