@@ -66,23 +66,24 @@ exports.updateVendor =  function(req, res) {
                }).single('file');
 
 exports.uploadVendor = function(req, res) {
+  //  console.log("uploadVendor method");
   Vendor.findById(req.params.id, function(err, vendor) {
     if (!vendor) {
       return res.status(400).send({ message: 'Vendor not found' });
     }
 
-    console.log("uploadVendor method"+ req.file);
+    //console.log("uploadVendor method"+ req.file);
     upload(req,res,function(err){
              if(err){
                   res.json({error_code:1,err_desc:err});
                   return;
              }
               res.json({error_code:0,err_desc:null});
-              console.log("Stored file name" + storage.filename);
+            //  console.log("Stored file name" + storage.filename);
          });
 
     vendor.save(function(err) {
-      res.status(200).send({ message: 'Vendor updated successfully' });
+    //  res.send({ message: 'Vendor updated successfully' });
     });
   });
 };
