@@ -17,4 +17,25 @@
         <input type="submit" class="btn btn-primary" value="Save"/>
     </div>
 </div>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+              Single Image with validations
+          <input
+             type="file"
+             ngf-select="upload($file)"
+             ng-model="vendor.file"
+             name="file"
+             ngf-pattern="'image/*'"
+             accept="image/*"
+             ngf-max-size="20MB"
+             />
+          Image thumbnail: <img style="width:100px;" ngf-thumbnail="vendor.file || 'thumb.jpg'"/>
+          <i ng-show="file.$error.required">*required</i><br>
+          <i ng-show="file.$error.maxSize">File too large
+          {{vendor.file.size / 1000000|number:1}}MB: max 20M</i>
+
+          <p>{{progress}}</p>
+
+    </div>
+</div>
 </form>

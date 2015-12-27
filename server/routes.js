@@ -21,6 +21,7 @@ module.exports = function(app) {
 	app.get('/api/vendors', vendor.getAllVendors);
 	app.get('/api/vendors/:id', vendor.getVendor);
 	app.put('/api/vendors/:id', vendor.updateVendor);
+	app.put('/api/vendors/upload/:id', vendor.uploadVendor);
 	app.delete('/api/vendors/:id', vendor.deleteVendor);
 	//User Routes
 	app.get('/api/useraccounts', user.getAllUsers);
